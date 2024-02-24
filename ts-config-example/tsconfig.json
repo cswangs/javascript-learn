@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    // module standard
+    "module": "es2015",
+    //target compile js version
+    "target": "es2015",
+    //lib 用来指定项目中使用的库
+    //    "lib": [
+    //      "es2015",
+    //      "dom"
+    //    ],
+    "outDir": "./dist",
+    "allowJs": true,
+    "checkJs": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true
+  },
+  "include": [
+    "./src/**/*"
+  ],
+  "exclude": [
+    "../node_modules"
+  ]
+}

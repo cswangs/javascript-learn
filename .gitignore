@@ -1,0 +1,16 @@
+.vscode
+.idea
+node_modules
+.DS_Store
+dist
+package-lock.json
+
+# dependencies
+node_modules/
+
+# production
+build/
+dist/
+tmp/
+lib/
+.idea/

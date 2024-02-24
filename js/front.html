@@ -1,0 +1,31 @@
+<!-- config & version section-->
+<div class="section">
+    <div class="bar config">Config
+        <input type="checkbox" id="audio" onchange="saveConfig(this,'audio')">AutoPlay
+        <input type="checkbox" id="fold" onchange="saveConfig(this,'fold')">HideHint
+        <input type="checkbox" id="example" onchange="saveConfig(this,'example')">Example
+    </div>
+    <!--  versioncsection -->
+    <div id='version' class='item'></div>
+</div>
+
+<!-- front section -->
+<div class="section">
+    <div id="front" class="items">
+        <span>{{expression}}<img src="_play48px.png" onClick="playAudio();"></span>
+    </div>
+    <hr>
+    <div id="phonetic" class="items">
+        <span>{{reading}}</span>
+    </div>
+    <!-- placehoder for audio atg -->
+    <audio id="player" src=""></audio>
+</div>
+
+<script type="text/javascript">
+    window.addEventListener('keypress', hotPlayAudio);
+    loadConfig();
+    if (config.audio) {
+        playAudio();
+    }
+</script>

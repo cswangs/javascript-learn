@@ -31,6 +31,7 @@
             showCircle(150, 150, 100).then(div => {
                 div.classList.add('message-ball');
                 div.append("Hello, world!");
+                console.log('hello world');
             });
         }
 
@@ -47,11 +48,20 @@
                 div.style.height = radius * 2 + 'px';
                 div.addEventListener('transitionend', function handler() {
                     div.removeEventListener('transitionend', handler);
-                    resolve(div);
+                    xxx((result) => resolve(result), div)
+                    // resolve(div);
+                    // resolve(div);
                 });
             }, 0))
         };
 
+        function xxx(callback, param) {
+            setTimeout(() => {
+                console.log('latency callback')
+                callback(param)
+                console.log('latency callback end')
+            }, 2000)
+        }
 
     </script>
 
